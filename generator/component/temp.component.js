@@ -2,12 +2,10 @@ import template from './<%= name %>.html';
 import controller from './<%= name %>.controller';
 import './<%= name %>.styl';
 
-let <%= name %>Component = {
+export default {
   restrict: 'E',
   bindings: {},
   template,
   controller,
-  controllerAs: 'vm'
+  controllerAs: 'vm',
 };
-
-export default <%= name %>Component;
