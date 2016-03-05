@@ -1,6 +1,8 @@
 var path    = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var jeet = require('jeet');
+var rupture = require('rupture');
 
 module.exports = {
   devtool: 'sourcemap',
@@ -12,6 +14,9 @@ module.exports = {
        { test: /\.styl$/, loader: 'style!css!stylus' },
        { test: /\.css$/, loader: 'style!css' }
     ]
+  },
+  stylus: {
+    use: [jeet(), rupture()]
   },
   plugins: [
     // Injects bundles in your index.html instead of wiring all manually.
