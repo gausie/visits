@@ -17,6 +17,8 @@
     "chai": "^3.4.0",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.19.0",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.0.2",
     "fs-walk": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
