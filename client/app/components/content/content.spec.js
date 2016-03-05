@@ -1,18 +1,19 @@
 /* eslint-env mocha */
 /* global inject, expect */
 
-import <%= upCaseName %>Module from './<%= name %>';
-import <%= upCaseName %>Controller from './<%= name %>.controller';
-import <%= upCaseName %>Component from './<%= name %>.component';
-import <%= upCaseName %>Template from './<%= name %>.html';
+import ContentModule from './content';
+import ContentController from './content.controller';
+import ContentComponent from './content.component';
+import ContentTemplate from './content.html';
 
-describe('<%= upCaseName %>', () => {
-  let $rootScope, makeController;
+describe('Content', () => {
+  let $rootScope;
+  let makeController;
 
-  beforeEach(window.module(<%= upCaseName %>Module.name));
+  beforeEach(window.module(ContentModule.name));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
-    makeController = () => new <%= upCaseName %>Controller();
+    makeController = () => new ContentController();
   }));
 
   describe('Module', () => {
@@ -31,16 +32,16 @@ describe('<%= upCaseName %>', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(<%= upCaseName %>Template).to.match(/{{\s?vm\.name\s?}}/g);
+      expect(ContentTemplate).to.match(/{{\s?vm\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
     // component/directive specs
-    let component = <%= upCaseName %>Component;
+    const component = ContentComponent;
 
     it('includes the intended template', () => {
-      expect(component.template).to.equal(<%= upCaseName %>Template);
+      expect(component.template).to.equal(ContentTemplate);
     });
 
     it('uses `controllerAs` syntax', () => {
@@ -48,7 +49,7 @@ describe('<%= upCaseName %>', () => {
     });
 
     it('invokes the right controller', () => {
-      expect(component.controller).to.equal(<%= upCaseName %>Controller);
+      expect(component.controller).to.equal(ContentController);
     });
   });
 });
