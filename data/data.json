@@ -3,8 +3,9 @@
     "id": 1,
     "name": "TestUser"
   },
-  "feed": [
+  "pins": [
     {
+      "id": 1,
       "type":"reminder",
       "date":"2015-01-05T12:00:00",
       "content": {
@@ -13,6 +14,7 @@
       }
     },
     {
+      "id": 2,
       "type":"reminder",
       "date":"2015-03-05T12:00:00",
       "content": {
@@ -21,13 +23,14 @@
       }
     },
     {
+      "id": 3,
       "type":"visit-notification",
       "date":"2015-03-05T12:00:00",
       "content": {
         "from":"Chris Bacon",
         "message":"Hi, we will be calling in to see you on March 20th.  Tap for more information.",
         "glossaryItem":"six-month-visit",
-        "actions":[]
+        "actions": []
       }
     }
   ]
