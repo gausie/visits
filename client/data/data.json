@@ -6,26 +6,32 @@
   "cards": [
     {
       "type":"milestone",
-      "date":"2015-01-05T12:00:00",
+      "date":"2015-02-28",
       "icon":"idk",
-      "message":"It is time for your MMR.",
+      "message":"Appointment with midwife Sarah Watts",
       "contentTemplate":"mmr-vaccine.html",
-      "appointment":null,
+      "appointment":{
+        "visitor":"Sarah Watts",
+        "start": "08:30",
+        "end": "90:00",
+        "duration": "30 minutes",
+      },
       "actions":[{
         "type":"book",
-        "message":"Book Appointment"
+        "message":"Reschedule"
       }]
     },
     {
-      "type":"milestone", 
-      "date":"2015-01-05T12:00:00",
+      "type":"milestone",
+      "date":"2015-03-06",
       "icon":"idk",
-      "message":"It is time for your MMR.",
+      "message":"Appointment with midwife Sarah Watts.",
       "contentTemplate":"mmr-vaccine.html",
       "appointment":{
-        "visitor":{
-          "name":"Chris The Doctor"
-        }
+        "visitor":"Sarah Watts",
+        "start": "08:30",
+        "end": "90:00",
+        "duration": "30 minutes",
       },
       "actions":[{
         "type":"book",
