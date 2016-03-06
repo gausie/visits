@@ -1,5 +1,13 @@
 import angular from 'angular';
 import _ from 'lodash';
+import { normalize, Schema, arrayOf } from 'normalizr';
+
+const userSchema = new Schema('users');
+const cardSchema = new Schema('cards');
+
+userSchema.define({
+  cards: arrayOf(cardSchema),
+});
 
 class DataService {
   constructor($http) {
@@ -8,17 +16,29 @@ class DataService {
 
   getData(id) {
     return this.$http
-      .get(`/data/data-${id}.json`)
-      .then(results => results.data) // Unwrap...
+      .get(`/data/user-${id}.json`)
+      .then(results => results.data)
       .then(x => {
-
+        //Ahahah Sam...
         _.each(x.cards, (c, i) => {
-            alert(i);
-        })
+          x.date = new Date(x.date);
+          if (x.cards[i+1]) {
+            x.cards[i+1].nextDate = x.cards[i+1].date;
+          }
+        });
 
         return x;
 
       });
+  }
+
+  getNormalizedData(id) {
+    return this.getData(id)
+      .then(data => this.normalize(data));
+  }
+
+  normalize(data) {
+    return normalize(data, userSchema);
   }
 }
 
