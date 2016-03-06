@@ -1,4 +1,5 @@
 import angular from 'angular';
+import _ from 'lodash';
 
 class DataService {
   constructor($http) {
@@ -8,7 +9,16 @@ class DataService {
   getData(id) {
     return this.$http
       .get(`/data/data-${id}.json`)
-      .then(results => results.data); // Unwrap...
+      .then(results => results.data) // Unwrap...
+      .then(x => {
+
+        _.each(x.cards, (c, i) => {
+            alert(i);
+        })
+
+        return x;
+
+      });
   }
 }
 
