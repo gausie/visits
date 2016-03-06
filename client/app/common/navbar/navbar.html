@@ -1,9 +1,11 @@
 <nav class="navbar">
 	<div class="navbar__inner">
-		<div class="navbar__inner__profile">
+		<div class="navbar__inner__back" ng-click="vm.back()" ng-if="vm.type === 'details'">
+		</div>
+		<div class="navbar__inner__profile" ng-class="{'right': vm.type === 'details'}">
   		Thomas Gierek
 		</div>
-  	<div class="navbar__inner__settings">
+  	<div ng-if="vm.type === 'default'" class="navbar__inner__settings">
   	</div>
 	</div>
 </nav>
