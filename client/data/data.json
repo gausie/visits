@@ -1,0 +1,36 @@
+{
+  "user": {
+    "id": 1,
+    "name": "TestUser"
+  },
+  "cards": [
+    {
+      "type":"milestone",
+      "date":"2015-01-05T12:00:00",
+      "icon":"idk",
+      "message":"It is time for your MMR.",
+      "contentTemplate":"mmr-vaccine.html",
+      "appointment":null,
+      "actions":[{
+        "type":"book",
+        "message":"Book Appointment"
+      }]
+    },
+    {
+      "type":"milestone",
+      "date":"2015-01-05T12:00:00",
+      "icon":"idk",
+      "message":"It is time for your MMR.",
+      "contentTemplate":"mmr-vaccine.html",
+      "appointment":{
+        "visitor":{
+          "name":"Chris The Doctor"
+        }
+      },
+      "actions":[{
+        "type":"book",
+        "message":"Rebook Appointment"
+      }]
+    },
+  ]
+}
