@@ -1,12 +1,14 @@
 @import '../../common/common'
 
 .details
-  padding-top 4rem
+  padding-top 3rem
   background-color $lightBgColor
-  height 100
+  min-height 100vh
 
   .card
     background-color $darkBgColor
+    border-radius 0
+    background-image none
 
   &--content
     padding 0 1em 1em 1em
@@ -15,10 +17,18 @@
       color $accentTextColor
 
     &--cta
-      appearance none
-      box-shadow none
-      border-radius 0
-      border 0 none
-      width 100%
-      color $textColor
       background-color $bgColor
+  
+  &__footer
+    width 100%
+    position fixed
+    bottom 0
+    left 0
+    padding 0.5rem
+    background-color white
+    &__cta
+      padding 1rem
+      text-align center
+      font-size 1rem
+      background $bgColor
+      color white 

@@ -1,4 +1,5 @@
 import angular from 'angular';
+import _ from 'lodash';
 import { normalize, Schema, arrayOf } from 'normalizr';
 
 const userSchema = new Schema('users');
@@ -16,7 +17,19 @@ class DataService {
   getData(id) {
     return this.$http
       .get(`/data/user-${id}.json`)
-      .then(results => results.data);
+      .then(results => results.data)
+      .then(x => {
+        //Ahahah Sam...
+        _.each(x.cards, (c, i) => {
+          x.date = new Date(x.date);
+          if (x.cards[i+1]) {
+            x.cards[i].nextDate = x.cards[i+1].date;
+          }
+        });
+
+        return x;
+
+      });
   }
 
   getNormalizedData(id) {

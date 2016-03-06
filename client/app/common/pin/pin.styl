@@ -1,18 +1,56 @@
 @import "../common"
 
 .pin
+  position relative
   font-size 15px
   padding-left 2rem
+  height 22rem
 
-  &__index
-    display inline-block
+  &__number
+    display block
+    position absolute
+    z-index 1
+    left 1rem
+    top 0
     width 2rem
     height 2rem
     border-radius 50%
     text-align: center
     font-weight 600
+    font-size: 150%
     color $darkBgColor
+    background white
+
+  &__bulletTrack
+    position absolute
+    top 3rem
+    left 1.75rem
+    width 0.5rem
+    bottom 1.5rem
+
+  &__bullet
+    position absolute
+    left 0rem
+    width 0.5rem
+    height 0.5rem
+    border-radius 50%
+
+    background white
+
+  &:after
+    content ''
+    position absolute
+    left 2rem
+    top 0
+    bottom 0
+    width 1px
     background white
 
   .card
     border-radius 1rem
+    margin-left 1.5rem
+    padding-right: 3rem
+    background-image url(/assets/chevron.png)
+    background-repeat no-repeat
+    background-position 96% 50%
+    background-size 6.25%

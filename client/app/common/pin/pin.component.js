@@ -5,7 +5,8 @@ import './pin.styl';
 export default {
   restrict: 'E',
   bindings: {
-    data: '='
+    data: '=',
+    index: '=',
   },
   template,
   controller,

@@ -1,7 +1,8 @@
 <div class="timeline">
-	<navbar></navbar>
+	<navbar type="'default'"></navbar>
 
 	<section>
-		<pin ng-repeat="c in vm.cards" data="c"></pin>
+		<pin ng-repeat="c in vm.cards" index="$index + 1" data="c"></pin>
 	</section>
+	<page-footer></page-footer>
 </div>

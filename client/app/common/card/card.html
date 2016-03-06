@@ -1,6 +1,11 @@
 <div class="card" ui-sref="details({id: vm.data.id})">
   <span class="card__title">{{vm.data.message}}</span>
-  <span class="card__date">{{vm.data.date | date:'EEEE dd MMMM yyyy'}}</span>
-  <span class="card__time">{{vm.data.message}}</span>
-  <span class="card__message">Thomas was 1 week old</span>
+  <span class="card__date">{{vm.data.date | date:'EEE dd MMMM yyyy'}}</span>
+  <span class="card__time" ng-if="!!vm.data.appointment">
+    {{vm.data.appointment.start}}
+    -
+    {{vm.data.appointment.end}}
+    ({{vm.data.appointment.duration}})
+  </span>
+  <span class="card__message">Thomas was 2 week old</span>
 </div>

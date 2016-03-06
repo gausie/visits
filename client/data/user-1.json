@@ -12,7 +12,7 @@
       "appointment":{
         "visitor":"Sarah Watts",
         "start": "08:30",
-        "end": "90:00",
+        "end": "09:00",
         "duration": "30 minutes"
       },
       "actions":[{
@@ -30,7 +30,43 @@
       "appointment":{
         "visitor":"Sarah Watts",
         "start": "08:30",
-        "end": "90:00",
+        "end": "09:00",
+        "duration": "30 minutes"
+      },
+      "actions":[{
+        "type":"book",
+        "message":"Rebook Appointment"
+      }]
+    },
+    {
+      "id": 3,
+      "type":"milestone",
+      "date":"2015-05-06",
+      "icon":"idk",
+      "message":"Appointment with midwife Sarah Watts.",
+      "contentTemplate":"mmr-vaccine.html",
+      "appointment":{
+        "visitor":"Sarah Watts",
+        "start": "08:30",
+        "end": "09:00",
+        "duration": "30 minutes"
+      },
+      "actions":[{
+        "type":"book",
+        "message":"Rebook Appointment"
+      }]
+    },
+    {
+      "id": 4,
+      "type":"milestone",
+      "date":"2015-06-06",
+      "icon":"idk",
+      "message":"Appointment with midwife Sarah Watts.",
+      "contentTemplate":"mmr-vaccine.html",
+      "appointment":{
+        "visitor":"Sarah Watts",
+        "start": "08:30",
+        "end": "09:00",
         "duration": "30 minutes"
       },
       "actions":[{

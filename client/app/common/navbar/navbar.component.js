@@ -4,7 +4,9 @@ import './navbar.styl';
 
 let navbarComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+  	type: '='
+  },
   template,
   controller,
   controllerAs: 'vm'
