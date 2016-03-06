@@ -1,4 +1,35 @@
 .card
-  padding 2em
-  margin 1em
-  border 1px solid #ccc
+  position: relative
+  font-size 15px
+  color white
+  font-weight 300
+  padding 1.5em
+  margin 1.5em
+  background-image url(/assets/chevron.png)
+  background-repeat no-repeat
+  background-position 96% 50%
+  background-size 8%
+
+  &--active
+    background-color rgba(0,0,0,.125)
+
+  &:hover,&:active
+    background-color rgba(0,0,0,.125)
+
+  span
+    display block
+    margin-bottom 0.3rem
+
+  &__title
+    font-style italic
+
+  &__date
+    font-size 140%
+    font-weight 300
+
+  &__time
+    font-weight 300
+
+  &__message
+    font-weight 600
+    margin-top 1rem
