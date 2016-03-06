@@ -7,7 +7,7 @@ export default class PinController {
     this.name = 'pin';
 
     if (this.data.nextDate) {
-      this.bullets = Math.abs(dayDiff(new Date(this.data.date), new Date(this.data.nextDate)));
+      this.bullets = Math.abs(dayDiff(new Date(this.data.date), new Date(this.data.nextDate))) / 7;
     }
     else {
       this.bullets = 5;
@@ -16,7 +16,5 @@ export default class PinController {
     this.bulletArr = [];
     for (var i = 0; i < this.bullets; i++)
       this.bulletArr.push(i);
-
-    console.dir(this.bulletArr);
   }
 }

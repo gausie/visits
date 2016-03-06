@@ -23,7 +23,7 @@ class DataService {
         _.each(x.cards, (c, i) => {
           x.date = new Date(x.date);
           if (x.cards[i+1]) {
-            x.cards[i+1].nextDate = x.cards[i+1].date;
+            x.cards[i].nextDate = x.cards[i+1].date;
           }
         });
 
