@@ -14,7 +14,7 @@
         "visitor":"Sarah Watts",
         "start": "08:30",
         "end": "90:00",
-        "duration": "30 minutes",
+        "duration": "30 minutes"
       },
       "actions":[{
         "type":"book",
@@ -31,12 +31,12 @@
         "visitor":"Sarah Watts",
         "start": "08:30",
         "end": "90:00",
-        "duration": "30 minutes",
+        "duration": "30 minutes"
       },
       "actions":[{
         "type":"book",
         "message":"Rebook Appointment"
       }]
-    },
+    }
   ]
 }
