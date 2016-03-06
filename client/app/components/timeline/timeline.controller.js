@@ -1,13 +1,11 @@
-class timelineController {
+export default class TimelineController {
   constructor(dataService) {
     this.name = 'timeline';
 
-    dataService.getData(1).then(x => {
-      this.cards = x.cards;
+    dataService.getData(1).then(user => {
+      this.cards = user.cards;
     });
   }
 }
 
-timelineController.$inject = ['dataService']
-
-export default timelineController;
+TimelineController.$inject = ['dataService'];
