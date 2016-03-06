@@ -1,5 +1,8 @@
 <div class="pin">
-  <div class=pin__index">1</div>
+  <div class="pin__number">{{vm.index}}</div>
+  <div class="pin__bulletTrack">
+    <div class="pin__bullet" ng-repeat="x in vm.bulletArr" ng-style="{'top':($index / (vm.bullets - 1)) * 100 + '%'}"></div>
+  </div>
   <card data="vm.data"></card>
 </div>
 
