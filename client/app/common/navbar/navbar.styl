@@ -11,28 +11,39 @@
   min-height 3rem
   z-index 1
   &__inner
-  	padding 0 2rem
-  	&__settings
-  		position absolute
-  		box-sizing border-box
-  		right 1rem
-  		top 0.6rem
-  		width 1.8rem
-  		height 1.8rem
-  		background-size 96%
-  		background-position center center
-  		background-repeat no-repeat
-  		background-image url(settings.png)
-  	&__profile
-  		position absolute
-  		left 1rem
-  		top 0.6rem
-  		height 1.8rem
-  		background-size 1.8rem 1.8rem
-  		padding-left 3rem
-  		padding-top 0.1rem
-  		background-repeat no-repeat
-  		background-image url(baby.png)
-  		background-position left center
-  		color $darkTextColor
-  		font-size 1.1rem
+    padding 0 2rem
+    &__back
+      position absolute
+      left 1rem
+      top 0.75rem
+      width 0.8rem
+      height 1.6rem
+      background-image url(chevron.png)
+      background-size cover
+    &__settings
+      position absolute
+      box-sizing border-box
+      right 1rem
+      top 0.6rem
+      width 1.8rem
+      height 1.8rem
+      background-size 96%
+      background-position center center
+      background-repeat no-repeat
+      background-image url(settings.png)
+    &__profile
+      position absolute
+      left 1rem 
+      top 0.6rem
+      height 1.8rem
+      background-size 1.8rem 1.8rem
+      padding-left 3rem
+      padding-top 0.1rem
+      background-repeat no-repeat
+      background-image url(baby.png)
+      background-position left center
+      color $darkTextColor
+      font-size 1.1rem
+      &.right
+        right 1rem
+        left auto  
