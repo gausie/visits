@@ -6,6 +6,7 @@ let cardComponent = {
   restrict: 'E',
   bindings: {
   	name: '=',
+  	data: '='
   },
   template,
   controller,

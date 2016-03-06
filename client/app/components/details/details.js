@@ -11,7 +11,7 @@ export default angular.module('details', [
 
   $stateProvider
     .state('details', {
-      url: '/details',
+      url: '/details?id',
       template: '<details-page></details-page>'
     });
 })
