@@ -3,12 +3,14 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
+import DataService from './services/dataService'
 import ngAnimate from 'angular-animate';
 import 'normalize.css';
 
 angular.module('app', [
     uiRouter,
     ngAnimate,
+    DataService.name,
     Common.name,
     Components.name
   ])
