@@ -1,4 +1,5 @@
 @import '../common'
+@require 'jeet'
 
 .navbar
   background-color $primaryColor
@@ -7,3 +8,21 @@
   top 0
   left 0
   width 100%
+  min-height 4rem
+  &__inner
+  	padding 0 2rem
+  	&__settings
+  		position absolute
+  		right 1rem
+  		top 1rem
+  		width 2rem
+  		height 2rem
+  		border 1px solid black
+  	&__profile
+  		position absolute
+  		left 1rem
+  		top 1rem
+  		width 2rem
+  		height 2rem
+  		border 1px solid black
+  		
