@@ -1,10 +1,9 @@
 {
-  "user": {
-    "id": 1,
-    "name": "TestUser"
-  },
+  "id": 1,
+  "name": "TestUser",
   "cards": [
     {
+      "id": 1,
       "type":"milestone",
       "date":"2015-02-28",
       "icon":"idk",
@@ -22,6 +21,7 @@
       }]
     },
     {
+      "id": 2,
       "type":"milestone",
       "date":"2015-03-06",
       "icon":"idk",
